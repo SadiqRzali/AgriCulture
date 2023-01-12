@@ -1,0 +1,25 @@
+﻿@model AgriCulture.Models.UserEditModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Profile Guncelle</h2>
+<br>
+<form method="post">
+    <br>
+    <label>Mail</label>
+    <input type="email" class="form-control" placeholder="mail" asp-for="Mail"/>
+    <br />
+    <label>Phone</label>
+    <input type="text" class="form-control" placeholder="phone" asp-for="Phone"/>
+    <br />
+    <label>Sifre</label>
+    <input type="text" class="form-control" placeholder="sifre" asp-for="Password" />
+    <br />
+    <label>Sifre Tekrar</label>
+    <input type="text" class="form-control" placeholder="sifre tekrar" asp-for="ConfigrPassword" />
+    <br />
+    <button class="btn btn-warning">Guncelle</button>
+</form>
+

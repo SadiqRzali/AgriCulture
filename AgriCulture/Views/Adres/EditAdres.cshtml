@@ -1,0 +1,37 @@
+﻿@model EntityLayer.Concrete.Adres
+@{
+    ViewData["Title"] = "EditAdres";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>EditAdres</h1>
+<br />
+@using (Html.BeginForm("EditAdres", "Adres", FormMethod.Post))
+{
+    <br />
+    @Html.Label("Aciklama 1")
+    @Html.ValidationMessageFor(x=>x.Description1, "", new {@style="color:green"})
+    <input type="text" class="form-control" asp-for="Description2" placeholder="Aciklama yaz"/>
+  
+    <br />
+    @Html.Label("Aciklama 2")
+    <span asp-validation-for="Description2" class="text-danger"></span>
+    <input type="text" class="form-control" asp-for="Description2" placeholder="Aciklama yaz" />
+  
+    <br /> 
+    @Html.Label("Aciklama 3")
+    <span asp-validation-for="Description3" class="text-danger"></span>
+    <input type="text" class="form-control" asp-for="Description3" placeholder="Aciklama yaz" />
+    
+    <br />
+    @Html.Label("Aciklama 4")
+    <span asp-validation-for="Description4" class="text-danger"></span>
+    <input type="text" class="form-control" asp-for="Description4" placeholder="Aciklama yaz" />
+    <br />
+    @Html.Label("Map")
+    <span asp-validation-for="MapInfo" class="text-danger"></span>
+    <input type="text" class="form-control" asp-for="MapInfo" placeholder="map"/>
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+    <br />
+}

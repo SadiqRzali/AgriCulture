@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Announcement
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Melumat Elave et</h1>
+<br />
+<form method="post">
+    <br />
+    @Html.Label("Baslig")
+    <input type="text" class="form-control" asp-for="Title" placeholder="Baslig yaz" />
+    <br />
+    @Html.Label("Aciglama")
+    <textarea cols="30" rows="5" class="form-control" asp-for="Description" placeholder="Aciklama Yaz">
+
+    </textarea>
+    <br />
+    <button class="btn btn-outline-warning">Yeni Melumat elave et</button>
+
+</form>
+
+

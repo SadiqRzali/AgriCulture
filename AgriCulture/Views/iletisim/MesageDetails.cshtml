@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.iletisim
+@{
+    ViewData["Title"] = "MesageDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Mesage Details</h1>
+<br />
+<form method="post">
+    @Html.HiddenFor(x=>x.ContactID)
+    <br>
+    @Html.Label("Ad Soyad")
+    <input type="text" class="form-control"  asp-for="Name" />
+    <br />
+    @Html.Label("Mail ")
+    <input type="text" class="form-control"  asp-for="Mail" />
+    <br />
+    @Html.Label("Date ")
+    <input type="date" class="form-control"  asp-for="Date" />
+    <br />
+    @Html.Label("Mesaj")
+    <textarea cols="30" rows="5" asp-for="Message" class="form-control"></textarea>
+    <br />
+</form>
+

@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.Admin
+@{
+    ViewData["Title"] = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AddAdmin</h1>
+<br />
+<form method="post">
+    <label>User</label>
+    <input type="text" class="form-control" asp-for="UserName" />
+    <br />
+    <label>Sifre</label>
+    <input type="text" class="form-control" asp-for="Password" />
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+    <br />
+</form>
+

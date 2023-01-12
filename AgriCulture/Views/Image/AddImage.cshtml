@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Image
+@{
+    ViewData["Title"] = "AddImage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Gorsel Elave Et</h1>
+<br />
+<form method="post">
+    <br />
+    <label>Baslig</label>
+    <input type="text" class="form-control" asp-for="Title" placeholder="Baslig Yaz"/>
+    <br />
+    <label>Aciklama</label>
+    <input type="text" class="form-control" asp-for="Description" placeholder="Aciglama Yaz" />
+    <br />
+    <label>Gorsel yolu</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" placeholder="Image elave et" />
+    <br />
+    <button class="btn btn-outline-warning">Kaydet</button>
+    <br />
+</form>
+

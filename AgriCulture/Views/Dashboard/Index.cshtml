@@ -1,0 +1,276 @@
+﻿@using EntityLayer.Concrete
+@model List<iletisim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<body class="sidebar-menu-collapsed">
+    <div class="se-pre-con"></div>
+    <section>
+    
+        <div class="main-content">
+            <!-- content -->
+            <div class="container-fluid content-top-gap">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb my-breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Ana sayfa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+                
+                <!-- statistics data -->
+                <div class="statistics">
+                    <div class="row">
+                        <div class="col-xl-6 pr-xl-2">
+                            <div class="row">
+                                <div class="col-sm-6 pr-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-users"> </i>
+                                        <h3 class="text-primary number">@ViewBag.v1</h3>
+                                        <p class="stat-text">Statistik 1</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 pl-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-eye"> </i>
+                                        <h3 class="text-secondary number">@ViewBag.v2</h3>
+                                        <p class="stat-text">Statistik 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 pl-xl-2">
+                            <div class="row">
+                                <div class="col-sm-6 pr-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-cloud-download"> </i>
+                                        <h3 class="text-success number">@ViewBag.v3</h3>
+                                        <p class="stat-text">Statistik 3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-6 pl-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-cart"> </i>
+                                        <h3 class="text-danger number">@ViewBag.v4</h3>
+                                        <p class="stat-text">Statistik</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="statistics">
+                        <div class="row">
+                            <div class="col-xl-6 pr-xl-2">
+                                <div class="row">
+                                    <div class="col-sm-6 pr-sm-2 statistics-grid">
+                                        <div class="card card_border border-primary-top p-4">
+                                            <i class="lnr lnr-users"> </i>
+                                            <h3 class="text-primary number">@ViewBag.v5</h3>
+                                            <p class="stat-text">Sut uretici</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 pl-sm-2 statistics-grid">
+                                        <div class="card card_border border-primary-top p-4">
+                                            <i class="lnr lnr-eye"> </i>
+                                            <h3 class="text-secondary number">@ViewBag.v6</h3>
+                                            <p class="stat-text">Urun pazarlama</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 pl-xl-2">
+                                <div class="row">
+                                    <div class="col-sm-6 pr-sm-2 statistics-grid">
+                                        <div class="card card_border border-primary-top p-4">
+                                            <i class="lnr lnr-cloud-download"> </i>
+                                            <h3 class="text-success number">@ViewBag.v7</h3>
+                                            <p class="stat-text">Sut Uretici</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 pl-sm-2 statistics-grid">
+                                        <div class="card card_border border-primary-top p-4">
+                                            <i class="lnr lnr-cart"> </i>
+                                            <h3 class="text-danger number">@ViewBag.v8</h3>
+                                            <p class="stat-text">Urun Pazarlama</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                
+                    
+                </div>
+                <!-- //statistics data -->
+                <!-- charts -->
+                <div class="chart">
+                    <div class="row">
+                        <div class="col-lg-6 pr-lg-2 chart-grid">
+                            <div class="card text-center card_border">
+                                <div class="card-header chart-grid__header">
+                                    Bar Chart
+                                </div>
+                                <div class="card-body">
+                                    <!-- bar chart -->
+                                    <div id="container">
+                                        <canvas id="barchart"></canvas>
+                                    </div>
+                                    <!-- //bar chart -->
+                                </div>
+                                <div class="card-footer text-muted chart-grid__footer">
+                                    Updated 2 hours ago
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pl-lg-2 chart-grid">
+                            <div class="card text-center card_border">
+                                <div class="card-header chart-grid__header">
+                                    Line Chart
+                                </div>
+                                <div class="card-body">
+                                    <!-- line chart -->
+                                    <div id="container">
+                                        <canvas id="linechart"></canvas>
+                                    </div>
+                                    <!-- //line chart -->
+                                </div>
+                                <div class="card-footer text-muted chart-grid__footer">
+                                    Updated just now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <!-- //content -->
+        </div>
+     
+
+
+    </section>
+
+    <div class="row">
+        <div class="col-md-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-title"></p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                           
+                                <tr>
+                                    <th>#</th>
+                                    <th>Ad Soyad</th>
+                                    <th>Mail</th>
+                                    <th>Tarih</th>
+                                    <th>Mesaji gor</th>
+                                </tr>
+
+
+                          
+                           
+                                @foreach(var item in Model)
+                                {
+                                <tr>
+                                    
+                
+                                    <td>@item.ContactID</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Mail</td>
+                                    <td>@item.Message</td>
+                                    <td><a class="btn-primary">Mesaji gor</a></td>
+                                </tr>
+                                }
+                         
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <script>// When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("movetop").style.display = "block";
+    } else {
+      document.getElementById("movetop").style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }</script>
+    <!-- /move top -->
+
+    <script src="~/web2/starter/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/web2/starter/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- chart js -->
+    <script src="~/web2/starter/assets/js/Chart.min.js"></script>
+    <script src="~/web2/starter/assets/js/utils.js"></script>
+    <!-- //chart js -->
+    <!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+    <script src="~/web2/starter/assets/js/bar.js"></script>
+    <script src="~/web2/starter/assets/js/linechart.js"></script>
+    <!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
+
+    <script src="~/web2/starter/assets/js/jquery.nicescroll.js"></script>
+    <script src="~/web2/starter/assets/js/scripts.js"></script>
+    <!-- close script -->
+    <script>var closebtns = document.getElementsByClassName("close-grid");
+  var i;
+
+  for (i = 0; i < closebtns.length; i++) {
+    closebtns[i].addEventListener("click", function () {
+      this.parentElement.style.display = 'none';
+    });
+  }</script>
+    <!-- //close script -->
+    <!-- disable body scroll when navbar is in active -->
+    <script>$(function () {
+    $('.sidebar-menu-collapsed').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });</script>
+    <!-- disable body scroll when navbar is in active -->
+    <!-- loading-gif Js -->
+    <script src="~/web2/starter/assets/js/modernizr.js"></script>
+    <script>$(window).load(function () {
+         // Animate loader off screen
+         $(".se-pre-con").fadeOut("slow");;
+     });</script>
+    <!--// loading-gif Js -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/web2/starter/assets/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

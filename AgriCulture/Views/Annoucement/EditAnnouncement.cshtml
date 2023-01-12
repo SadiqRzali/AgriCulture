@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Announcement
+@{
+    ViewData["Title"] = "EditAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Melumat Guncelle</h1>
+<br />
+<form method="post">
+    <br />
+    @Html.Label("ID")
+    @Html.TextBoxFor(x=>x.ID,new {@class="form-control"})
+    <br>
+    @Html.Label("Baslig")
+    <input type="text" class="form-control" placeholder="Baslig Yazin" asp-for="Title" />
+    <br />
+    @Html.Label("Date ")
+    <input type="date" class="form-control" placeholder="Tarix yazin" asp-for="Date"/>
+    <br />
+    @Html.Label("Aciklama")
+    <textarea cols="30" rows="5" asp-for="Description" class="form-control" placeholder="Aciglama yazin"></textarea>
+    <br />
+    <button class="btn btn-outline-primary">Guncelle</button>
+</form>
+

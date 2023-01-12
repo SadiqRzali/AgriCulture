@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "EditTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>EditTeam</h1>
+<br />
+<form method="post">
+    <br />
+    @Html.Label("ID")
+    @Html.TextBoxFor(x=>x.TeamID,new {@class="form-control"})
+    <br>
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x=>x.PersonName,new {@class="form-control"})
+    <br />
+    @Html.Label("Baslig ")
+    @Html.TextBoxFor(x=>x.Title,new {@class="form-control"})
+    <br />
+    @Html.Label("Gorsel")
+    @Html.TextBoxFor(x=>x.Image,new {@class="form-control"})
+    <br />
+    @Html.Label("FaceBook")
+    @Html.TextBoxFor(x=>x.FacebookUrl,new {@class="form-control"})
+    <br>
+    @Html.Label("Instagram")
+    @Html.TextBoxFor(x=>x.InstaUrl,new {@class="form-control"})
+    <br />
+    @Html.Label("Web")
+    @Html.TextBoxFor(x=>x.WebSiteUrl,new {@class="form-control"})
+    <br />
+    @Html.Label("Twit")
+    @Html.TextBoxFor(x=>x.TwitterUrl,new {@class="form-control"})
+    <br />
+    <button class="btn btn-outline-primary">Guncelle</button>
+    
+
+</form>
+
